@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="contact_form_style.css">
+
+    <script type="text/javascript">
+        function confirmCancle() {
+            confirm("Cancle will result into losing data. Are you sure you want to cancle?");
+        }
+        
+
+    </script>
+    <style>
+        .input-group {
+            position: relative;
+        }
+
+        .input-group::after {
+            content: '*';
+            position: absolute;
+            top: -25px;
+            left: 0px;
+            color: #f00
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div class="container_form">
+        <div class="content">
+            <div class="right-side">
+                
+               
+                <div class="topic-text">Send us your Idea</div>
+                <p>If you have ideas you want to work on, send us a message and we'll be glad to help!</p>
+                
+                <form action="mail.php" method="post" target="_blank" name="form">
+                    <div class="input-box  ">
+                        <span class="input-group"></span>
+                        <input type="text " name="name" class="required" placeholder="Please enter your name here "
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <span class="input-group"></span>
+                        <input type="email" name="email" placeholder="Please enter your email here" required>
+                    </div>
+                    <div class="input-box">
+
+                        <input type="tel" id="phone" name="phone" placeholder="Please Enter you contact number here">
+                    </div>
+                    <div class="input-box message-box">
+                        <span class="input-group" style="top: -85px;" ></span>
+                        <textarea name="message" placeholder="Enter your Idea here" required></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="submit" onclick="form_validation()">
+
+                    </div>
+                    <div class="button">
+                        <input type="reset" value="Cancel" onclick="confirmCancle()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
